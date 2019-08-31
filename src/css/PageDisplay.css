@@ -1,0 +1,41 @@
+:root {
+    --trackPos: 0;
+}
+
+.page-display {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.page-display-item {
+    width: calc(100% / 3);
+    text-align: center;
+    padding-bottom: 10px;
+    color: #b8b8c7;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.8rem;
+    transition: color 0.3s ease;
+}
+.page-display-item.active {
+    color: #0e66f9;
+}
+.page-display-track {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: #b8b8c7;
+    overflow: hidden;
+}
+.page-display-track:before {
+    content: "";
+    position: absolute;
+    width: calc(100% / 3);
+    height: 100%;
+    left: 0;
+    left: var(--trackPos);
+    top: 0;
+    background-color: #0e66f9;
+    transition: left 0.3s ease;
+}

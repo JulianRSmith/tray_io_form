@@ -1,8 +1,16 @@
 import React, { Component } from "react";
 import "../css/App.css";
 
+import PageDisplay from "./PageDisplay";
+
 class App extends Component {
     state = {
+        pages: {
+            index: 0,
+            user: true,
+            privacy: false,
+            done: false
+        },
         name: "",
         role: "",
         email: "",
@@ -57,6 +65,7 @@ class App extends Component {
             <div className="App">
                 <h1>Sign up</h1>
                 <div className="form-area">
+                    <PageDisplay pages={this.state.pages} />
                     <form className="form" onSubmit={this.handleSubmit}>
                         {/* User Section */}
                         <label>

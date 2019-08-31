@@ -55,65 +55,68 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <form onSubmit={this.handleSubmit}>
-                    {/* User Section */}
-                    <label>
-                        Name
-                        <input
-                            name="name"
-                            type="text"
-                            required
-                            onChange={this.handleChange}
-                        ></input>
-                    </label>
-                    <label>
-                        Role
-                        <input
-                            name="role"
-                            type="text"
-                            onChange={this.handleChange}
-                        ></input>
-                    </label>
-                    <label>
-                        Email
-                        <input
-                            name="email"
-                            type="email"
-                            required
-                            onChange={this.handleChange}
-                        ></input>
-                    </label>
-                    <label>
-                        Password
-                        <input
-                            name="password"
-                            type="password"
-                            required
-                            onChange={this.handleChange}
-                        ></input>
-                    </label>
-                    {/* Privacy Section */}
-                    <label>
-                        <input
-                            name="updatesPrimary"
-                            type="checkbox"
-                            checked={this.state.updatesPrimary}
-                            onChange={this.handleChange}
-                        ></input>
-                        Receive updates about Tray.io products by email
-                    </label>
-                    <label>
-                        <input
-                            name="updatedThird"
-                            type="checkbox"
-                            checked={this.state.updatedThird}
-                            onChange={this.handleChange}
-                        ></input>
-                        Receive communication by email for other products
-                        created by the Tray.io team
-                    </label>
-                    <button>Submit</button>
-                </form>
+                <h1>Sign up</h1>
+                <div className="form-area">
+                    <form className="form" onSubmit={this.handleSubmit}>
+                        {/* User Section */}
+                        <label>
+                            Name
+                            <input
+                                name="name"
+                                type="text"
+                                required
+                                onChange={this.handleChange}
+                            ></input>
+                        </label>
+                        <label>
+                            Role
+                            <input
+                                name="role"
+                                type="text"
+                                onChange={this.handleChange}
+                            ></input>
+                        </label>
+                        <label>
+                            Email
+                            <input
+                                name="email"
+                                type="email"
+                                required
+                                onChange={this.handleChange}
+                            ></input>
+                        </label>
+                        <label>
+                            Password
+                            <input
+                                name="password"
+                                type="password"
+                                required
+                                onChange={this.handleChange}
+                            ></input>
+                        </label>
+                        {/* Privacy Section */}
+                        <label>
+                            <input
+                                name="updatesPrimary"
+                                type="checkbox"
+                                checked={this.state.updatesPrimary}
+                                onChange={this.handleChange}
+                            ></input>
+                            Receive updates about Tray.io products by email
+                        </label>
+                        <label>
+                            <input
+                                name="updatedThird"
+                                type="checkbox"
+                                checked={this.state.updatedThird}
+                                onChange={this.handleChange}
+                            ></input>
+                            Receive communication by email for other products
+                            created by the Tray.io team
+                        </label>
+                        <button>Submit</button>
+                    </form>
+                </div>
             </div>
         );
     }

@@ -1,0 +1,22 @@
+.page.user .input-field {
+    margin-bottom: 20px;
+}
+
+.page.user .input-field label .required {
+    color: red;
+}
+
+.page.user .input-field input {
+    display: block;
+    margin-top: 5px;
+    width: calc(100% - 30px);
+    border: 1px solid #b8b8c7;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+.page.user .input-field input:focus {
+    border-color: #0e66f9;
+}

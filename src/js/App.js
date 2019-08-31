@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "../css/App.css";
 
 import PageDisplay from "./PageDisplay";
+import User from "./User";
+import Privacy from "./Privacy";
 
 class App extends Component {
     state = {
@@ -36,8 +38,8 @@ class App extends Component {
 
     // Calls when the form is submited
     handleSubmit = e => {
-        // Prevent browser from reloading the page
-        e.preventDefault();
+        // Next page
+        this.nextPage(e, "privacy", "done");
         // Get state of inputs
         const {
             name,
@@ -60,70 +62,45 @@ class App extends Component {
         console.log(JSON.stringify(formData));
     };
 
+    nextPage = (e, currentPage, nextPage) => {
+        // Stop browser from refreshing
+        e.preventDefault();
+        // Increase the index of the pages by 1. Then set the current page to false and the next page to true
+        this.setState(prevState => {
+            prevState.pages.index = prevState.pages.index + 1;
+            prevState.pages[currentPage] = false;
+            prevState.pages[nextPage] = true;
+            return {
+                pages: prevState.pages
+            };
+        });
+    };
+
     render() {
         return (
             <div className="App">
                 <h1>Sign up</h1>
                 <div className="form-area">
+                    {/* Show Page Display */}
                     <PageDisplay pages={this.state.pages} />
                     <form className="form" onSubmit={this.handleSubmit}>
-                        {/* User Section */}
-                        <label>
-                            Name
-                            <input
-                                name="name"
-                                type="text"
-                                required
-                                onChange={this.handleChange}
-                            ></input>
-                        </label>
-                        <label>
-                            Role
-                            <input
-                                name="role"
-                                type="text"
-                                onChange={this.handleChange}
-                            ></input>
-                        </label>
-                        <label>
-                            Email
-                            <input
-                                name="email"
-                                type="email"
-                                required
-                                onChange={this.handleChange}
-                            ></input>
-                        </label>
-                        <label>
-                            Password
-                            <input
-                                name="password"
-                                type="password"
-                                required
-                                onChange={this.handleChange}
-                            ></input>
-                        </label>
-                        {/* Privacy Section */}
-                        <label>
-                            <input
-                                name="updatesPrimary"
-                                type="checkbox"
-                                checked={this.state.updatesPrimary}
-                                onChange={this.handleChange}
-                            ></input>
-                            Receive updates about Tray.io products by email
-                        </label>
-                        <label>
-                            <input
-                                name="updatedThird"
-                                type="checkbox"
-                                checked={this.state.updatedThird}
-                                onChange={this.handleChange}
-                            ></input>
-                            Receive communication by email for other products
-                            created by the Tray.io team
-                        </label>
-                        <button>Submit</button>
+                        {/* Display "User" Page */}
+                        {this.state.pages.user && (
+                            <User
+                                handleChange={this.handleChange}
+                                nextPage={this.nextPage}
+                            />
+                        )}
+                        {/* Display "Privacy" Page */}
+                        {this.state.pages.privacy && (
+                            <Privacy
+                                handleChange={this.handleChange}
+                                checkboxes={{
+                                    primary: this.state.updatesPrimary,
+                                    third: this.state.updatedThird
+                                }}
+                            />
+                        )}
                     </form>
                 </div>
             </div>

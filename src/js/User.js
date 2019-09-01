@@ -98,7 +98,7 @@ function User({ handleChange, nextPage, errors, noErrors }) {
     ));
     return (
         <div className="page user">
-            {inputs}
+            <div className="page-inputs">{inputs}</div>
             <div className="page-btn-area">
                 <button
                     className={`page-btn${noErrors ? " valid" : ""}`}

@@ -10,7 +10,7 @@
     position: relative;
     width: 100%;
     max-width: 400px;
-    min-height: 350px;
+    min-height: 580px;
     padding: 20px 30px;
     border-radius: 10px;
     -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.15);
@@ -22,6 +22,15 @@
     display: block;
 }
 
+.input-field {
+    margin-bottom: 20px;
+}
+.page {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    min-height: 551px;
+}
 .page-btn-area {
     position: relative;
     display: block;
@@ -39,12 +48,13 @@
     letter-spacing: 0.2em;
     font-size: 0.8rem;
     outline: none;
-    cursor: pointer;
+    cursor: not-allowed;
     transition: all 0.3s ease;
 }
 .page-btn.valid {
     background-color: #0e66f9;
     color: #fff;
+    cursor: pointer;
 }
 .page-btn.valid:hover {
     -webkit-box-shadow: 0px 0px 5px 0px rgba(14, 100, 249, 0.5);

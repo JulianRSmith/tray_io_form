@@ -1,0 +1,55 @@
+.page.privacy .input-field label {
+    display: flex;
+    cursor: pointer;
+}
+.input-field [type="checkbox"] {
+    display: none;
+}
+.check {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #b8b8c7;
+    border-radius: 8px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+.check:before {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    background-color: #0e66f9;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.3s ease;
+}
+.check:after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid #b8b8c7;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+}
+.input-field [type="checkbox"]:checked + .check {
+    border-color: #0e66f9;
+}
+.input-field [type="checkbox"]:checked + .check:after {
+    border-color: #fff;
+}
+.input-field [type="checkbox"]:checked + .check:before {
+    transform: translate(-50%, -50%) scale(1);
+}
+.page.privacy .input-field .text {
+    width: 100%;
+}

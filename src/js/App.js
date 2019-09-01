@@ -4,6 +4,7 @@ import "../css/App.css";
 import PageDisplay from "./PageDisplay";
 import User from "./User";
 import Privacy from "./Privacy";
+import Done from "./Done";
 
 class App extends Component {
     state = {
@@ -152,6 +153,8 @@ class App extends Component {
                                 }}
                             />
                         )}
+                        {/* Show done page */}
+                        {this.state.pages.done && <Done />}
                     </form>
                 </div>
             </div>

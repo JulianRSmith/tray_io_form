@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { CSSTransition } from "react-transition-group";
+
 import "../css/App.css";
 
 import PageDisplay from "./PageDisplay";
@@ -135,16 +137,24 @@ class App extends Component {
                         noValidate
                     >
                         {/* Display "User" Page */}
-                        {this.state.pages.user && (
+                        <CSSTransition
+                            in={this.state.pages.user}
+                            timeout={600}
+                            unmountOnExit
+                        >
                             <User
                                 handleChange={this.handleChange}
                                 nextPage={this.nextPage}
                                 errors={this.state.inputsValid}
                                 noErrors={this.formValid()}
                             />
-                        )}
+                        </CSSTransition>
                         {/* Display "Privacy" Page */}
-                        {this.state.pages.privacy && (
+                        <CSSTransition
+                            in={this.state.pages.privacy}
+                            timeout={600}
+                            unmountOnExit
+                        >
                             <Privacy
                                 handleChange={this.handleChange}
                                 checkboxes={{
@@ -152,9 +162,15 @@ class App extends Component {
                                     third: this.state.updatedThird
                                 }}
                             />
-                        )}
+                        </CSSTransition>
                         {/* Show done page */}
-                        {this.state.pages.done && <Done />}
+                        <CSSTransition
+                            in={this.state.pages.done}
+                            timeout={600}
+                            unmountOnExit
+                        >
+                            <Done />
+                        </CSSTransition>
                     </form>
                 </div>
             </div>

@@ -16,6 +16,7 @@ class App extends Component {
             privacy: false,
             done: false
         },
+        doneReady: false,
         name: "",
         role: "",
         email: "",
@@ -168,8 +169,9 @@ class App extends Component {
                             in={this.state.pages.done}
                             timeout={600}
                             unmountOnExit
+                            onEntered={() => this.setState({ doneReady: true })}
                         >
-                            <Done />
+                            <Done isShown={this.state.doneReady} />
                         </CSSTransition>
                     </form>
                 </div>

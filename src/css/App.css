@@ -7,13 +7,21 @@
 }
 
 /* -------------------------------------- */
+/* Header */
+.header .logo {
+    display: block;
+    width: 200px;
+    height: auto;
+}
+
+/* -------------------------------------- */
 /* Form Section */
 .form {
     position: relative;
 }
 .form-area {
     position: relative;
-    width: 100%;
+    width: calc(100% - 90px);
     max-width: 400px;
     min-height: 580px;
     padding: 20px 30px;
@@ -61,12 +69,12 @@
 .page-btn-area {
     position: relative;
     display: block;
-    margin-top: 40px;
+    margin-top: 30px;
     text-align: right;
 }
 .page-btn {
     border: none;
-    background-color: #ececec;
+    background-color: #f3f3f6;
     border-radius: 8px;
     color: #b8b8c7;
     padding: 10px 15px;
@@ -87,4 +95,25 @@
     -webkit-box-shadow: 0px 0px 5px 0px rgba(14, 100, 249, 0.5);
     -moz-box-shadow: 0px 0px 5px 0px rgba(14, 100, 249, 0.5);
     box-shadow: 0px 0px 5px 0px rgba(14, 100, 249, 0.5);
+}
+
+/* -------------------------------------- */
+/* Login */
+.login {
+    position: relative;
+    cursor: pointer;
+    color: #0dbf73;
+}
+.login:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 0;
+    height: 2px;
+    background-color: #0dbf73;
+    transition: width 0.3s ease;
+}
+.login:hover:before {
+    width: 100%;
 }

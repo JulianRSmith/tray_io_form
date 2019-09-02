@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { CSSTransition } from "react-transition-group";
 
 import "../css/App.css";
+import logo from "../assets/tray_io_logo.svg";
 
 import PageDisplay from "./PageDisplay";
 import User from "./User";
@@ -128,6 +129,9 @@ class App extends Component {
     render() {
         return (
             <div className="App">
+                <header className="header">
+                    <img src={logo} className="logo" alt="Tray io" />
+                </header>
                 <h1>Sign up</h1>
                 <div className="form-area">
                     {/* Show Page Display */}
@@ -175,6 +179,10 @@ class App extends Component {
                         </CSSTransition>
                     </form>
                 </div>
+                <p>
+                    Already have an account?{" "}
+                    <span className="login">Log in</span>
+                </p>
             </div>
         );
     }

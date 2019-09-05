@@ -47,15 +47,16 @@ The "Done" page is rendered once the form is submitted and features content info
 ## Testing
 
 The app is tested to using the following information:
-| Name | Role | Email | Password | Privacy 1 | Privacy 2 | Test Passed?
-| --- | --- | --- | --- | --- | --- | --- |
-| Julian Smith | Creative Front End Devloper | contact@juliansmith.co | h3lloWorld | true | false | YES |
-| John Doe | null | email@email.com | pAssWord01 | false | false | YES |
-| Hamza Fields | Policeman | e@e.com | pass worD1 | true | true | YES |
-| K | null | email......e@email.ac.uk | TESTER | n/a | n/a | YES |
-| null | null | email@.com | hello | n/a | n/a | YES |
-| John Snow | King of the North | shesmy@queen.org | Ygritt34Life | yes | yes | YES |
-| Arya Stark | Super jumping assassin | needle@gmail.co.uk | st1ckEmWithTh3P0intyEnd | no | yes | YES |
-| Ned Stark | Headless man | head@spike.net | w1nterFell!? | yes | yes | YES |
-| Tyrion Lannister | Imp | RINGTHEBELLS@PLEASE.COM | s h A e 1 0 1 | no | no | YES |
-| Night King | Wall breaker | \_icey@hotmail.fr | **\_\_\_**1C3y | no | no | YES |
+
+| Name             | Role                        | Email                    | Password                | Privacy 1 | Privacy 2 | Test Passed? |
+| ---------------- | --------------------------- | ------------------------ | ----------------------- | --------- | --------- | ------------ |
+| Julian Smith     | Creative Front End Devloper | contact@juliansmith.co   | h3lloWorld              | true      | false     | YES          |
+| John Doe         | null                        | email@email.com          | pAssWord01              | false     | false     | YES          |
+| Hamza Fields     | Policeman                   | e@e.com                  | pass worD1              | true      | true      | YES          |
+| K                | null                        | email......e@email.ac.uk | TESTER                  | n/a       | n/a       | YES          |
+| null             | null                        | email@.com               | hello                   | n/a       | n/a       | YES          |
+| John Snow        | King of the North           | shesmy@queen.org         | Ygritt34Life            | yes       | yes       | YES          |
+| Arya Stark       | Super jumping assassin      | needle@gmail.co.uk       | st1ckEmWithTh3P0intyEnd | no        | yes       | YES          |
+| Ned Stark        | Headless man                | head@spike.net           | w1nterFell!?            | yes       | yes       | YES          |
+| Tyrion Lannister | Imp                         | RINGTHEBELLS@PLEASE.COM  | s h A e 1 0 1           | no        | no        | YES          |
+| Night King       | Wall breaker                | \_icey@hotmail.fr        | **\_\_\_**1C3y          | no        | no        | YES          |

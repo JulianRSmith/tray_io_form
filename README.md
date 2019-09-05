@@ -48,7 +48,7 @@ The "Done" page is rendered once the form is submitted and features content info
 
 The app is tested to using the following information:
 | Name | Role | Email | Password | Privacy 1 | Privacy 2 | Test Passed?
-|--|--|--|--|--|--|--|
+| --- | --- | --- | --- | --- | --- | --- |
 | Julian Smith | Creative Front End Devloper | contact@juliansmith.co | h3lloWorld | true | false | YES |
 | John Doe | null | email@email.com | pAssWord01 | false | false | YES |
 | Hamza Fields | Policeman | e@e.com | pass worD1 | true | true | YES |

@@ -10,7 +10,7 @@
 
 Using your command line interface, navigate to the directory where you want this project to be saved. When here, run the following command:
 
-`git clone [git repository link here]`
+`git clone https://github.com/JulianRSmith/tray_io_form.git`
 
 ### How to run the files
 

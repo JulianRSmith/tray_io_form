@@ -52,7 +52,7 @@ class App extends Component {
                 errors.name = value.length > 0;
                 break;
             case "email":
-                errors.email = validEmail.test(value);
+                errors.email = validEmail.test(value.toLowerCase());
                 break;
             case "password":
                 errors.password = value.length > 9 && validPassword.test(value);
@@ -102,7 +102,7 @@ class App extends Component {
             const formData = {
                 name,
                 role,
-                email,
+                email: email.toLowerCase(),
                 password,
                 updatesPrimary,
                 updatedThird
